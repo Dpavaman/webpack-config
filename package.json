@@ -1,13 +1,14 @@
 {
-  "private" : true,
+  "private": true,
   "name": "webpack-config",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "watch" : "webpack --watch",
-    "build" : "webpack"
+    "watch": "webpack --watch",
+    "build": "NODE_ENV=production webpack",
+    "build-dev" : "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   "author": "Pavaman Dabeer",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0"
