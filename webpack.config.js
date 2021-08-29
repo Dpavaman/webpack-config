@@ -8,12 +8,24 @@ if (process.env.NODE_ENV === "development") {
 
 module.exports = {
   mode: mode,
-
+  output: {
+    assetModuleFilename: "images/[hash][ext][query]",
+  },
   module: {
     rules: [
       {
+        test: /\.(png | jpe?g | gif | svg)$/i,
+        type: "asset",
+      },
+      {
         test: /\.css$/i,
-        use: [miniCssExtractPlugin.loader, "css-loader"],
+        use: [
+          {
+            loader: miniCssExtractPlugin.loader,
+            options: { publicPath: "" },
+          },
+          "css-loader",
+        ],
       },
       {
         test: /\.jsx?$/,

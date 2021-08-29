@@ -3,3 +3,15 @@ body {
   background-color: peachpuff;
   color: #222;
 }
+
+.hero {
+  background: url(../images/cover.jpeg);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+ul {
+  list-style: url(../images/sword.png);
+}
