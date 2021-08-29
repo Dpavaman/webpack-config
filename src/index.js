@@ -1,9 +1,4 @@
-import "./styles/index.css";
+import { render } from "react-dom";
+import App from "./components/App";
 
-const webPackConfig = {
-  webpack: "5.51.1",
-  babel: "7.15.0",
-  "css-loader": "6.2.0",
-};
-
-console.log(webPackConfig);
+render(<App />, document.getElementById("root"));
